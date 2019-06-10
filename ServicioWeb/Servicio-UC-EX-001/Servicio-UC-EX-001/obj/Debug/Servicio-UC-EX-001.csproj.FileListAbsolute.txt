@@ -1,0 +1,6 @@
+C:\CAISA\ServicioWeb\Servicio-UC-EX-001\Servicio-UC-EX-001\bin\Parametros.xml
+C:\CAISA\ServicioWeb\Servicio-UC-EX-001\Servicio-UC-EX-001\bin\Servicio-UC-EX-001.dll
+C:\CAISA\ServicioWeb\Servicio-UC-EX-001\Servicio-UC-EX-001\bin\Servicio-UC-EX-001.pdb
+C:\CAISA\ServicioWeb\Servicio-UC-EX-001\Servicio-UC-EX-001\obj\Debug\Servicio-UC-EX-001.csprojResolveAssemblyReference.cache
+C:\CAISA\ServicioWeb\Servicio-UC-EX-001\Servicio-UC-EX-001\obj\Debug\Servicio-UC-EX-001.dll
+C:\CAISA\ServicioWeb\Servicio-UC-EX-001\Servicio-UC-EX-001\obj\Debug\Servicio-UC-EX-001.pdb

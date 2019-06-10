@@ -1,0 +1,4 @@
+C:\CAISA\ServicioWeb\WebAppTest\WebAppTest\bin\WebAppTest.dll
+C:\CAISA\ServicioWeb\WebAppTest\WebAppTest\bin\WebAppTest.pdb
+C:\CAISA\ServicioWeb\WebAppTest\WebAppTest\obj\Release\WebAppTest.dll
+C:\CAISA\ServicioWeb\WebAppTest\WebAppTest\obj\Release\WebAppTest.pdb

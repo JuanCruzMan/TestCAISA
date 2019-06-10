@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://CAISA_DEMO.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://CAISA_DEMO.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servicio para alta de usuario</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://CAISA_DEMO.org/">
+      <s:element name="Ingreso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IngresoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IngresoResult" type="tns:ArrayOfUsuarios" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUsuarios">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Usuarios" nillable="true" type="tns:Usuarios" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Usuarios">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="correoelectronico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellidoPat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellidoMat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechNac" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="edad" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pass1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pass2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pass3" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CapturaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apePa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apeMa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechNac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="edad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapturaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CapturaUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apePa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apeMa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechNac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="edad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActualizaUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorraUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorraUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BorraUsuarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarCorreo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarCorreoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarCorreoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IngresoSoapIn">
+    <wsdl:part name="parameters" element="tns:Ingreso" />
+  </wsdl:message>
+  <wsdl:message name="IngresoSoapOut">
+    <wsdl:part name="parameters" element="tns:IngresoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CapturaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:CapturaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="CapturaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:CapturaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorraUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:BorraUsuario" />
+  </wsdl:message>
+  <wsdl:message name="BorraUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:BorraUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarCorreo" />
+  </wsdl:message>
+  <wsdl:message name="EnviarCorreoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Registro_x0020_de_x0020_UsuarioSoap">
+    <wsdl:operation name="Ingreso">
+      <wsdl:input message="tns:IngresoSoapIn" />
+      <wsdl:output message="tns:IngresoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapturaUsuario">
+      <wsdl:input message="tns:CapturaUsuarioSoapIn" />
+      <wsdl:output message="tns:CapturaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaUsuario">
+      <wsdl:input message="tns:ActualizaUsuarioSoapIn" />
+      <wsdl:output message="tns:ActualizaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorraUsuario">
+      <wsdl:input message="tns:BorraUsuarioSoapIn" />
+      <wsdl:output message="tns:BorraUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreo">
+      <wsdl:input message="tns:EnviarCorreoSoapIn" />
+      <wsdl:output message="tns:EnviarCorreoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Registro_x0020_de_x0020_UsuarioSoap" type="tns:Registro_x0020_de_x0020_UsuarioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ingreso">
+      <soap:operation soapAction="http://CAISA_DEMO.org/Ingreso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapturaUsuario">
+      <soap:operation soapAction="http://CAISA_DEMO.org/CapturaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaUsuario">
+      <soap:operation soapAction="http://CAISA_DEMO.org/ActualizaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorraUsuario">
+      <soap:operation soapAction="http://CAISA_DEMO.org/BorraUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreo">
+      <soap:operation soapAction="http://CAISA_DEMO.org/EnviarCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Registro_x0020_de_x0020_UsuarioSoap12" type="tns:Registro_x0020_de_x0020_UsuarioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ingreso">
+      <soap12:operation soapAction="http://CAISA_DEMO.org/Ingreso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapturaUsuario">
+      <soap12:operation soapAction="http://CAISA_DEMO.org/CapturaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaUsuario">
+      <soap12:operation soapAction="http://CAISA_DEMO.org/ActualizaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorraUsuario">
+      <soap12:operation soapAction="http://CAISA_DEMO.org/BorraUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreo">
+      <soap12:operation soapAction="http://CAISA_DEMO.org/EnviarCorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Registro_x0020_de_x0020_Usuario">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servicio para alta de usuario</wsdl:documentation>
+    <wsdl:port name="Registro_x0020_de_x0020_UsuarioSoap" binding="tns:Registro_x0020_de_x0020_UsuarioSoap">
+      <soap:address location="http://localhost:5447/Registo.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Registro_x0020_de_x0020_UsuarioSoap12" binding="tns:Registro_x0020_de_x0020_UsuarioSoap12">
+      <soap12:address location="http://localhost:5447/Registo.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<conexion>
+  <ValidaConexion>
+    <nombre>Produccion</nombre>
+    <ValidaDat>Data Source=(localdb)\Projects;Initial Catalog=CAISA;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False</ValidaDat>
+    <CorreoEnvia>caisa1068@outlook.com</CorreoEnvia>
+    <PassCorreo>CaisaMex10</PassCorreo>
+    <Smtp>smtp.live.com</Smtp>
+    <Puerto>25</Puerto>
+    <CorreoDestino>jcruzmandujano@prodigy.net.mx</CorreoDestino>
+    <CorreoDestino1>juancruzmandujano@gmail.com</CorreoDestino1>
+    <MsjAsunto>Recuperacion de Contraseña Servicio Web CAISA</MsjAsunto>
+    <MsjBodyExepcion1>Se ha recuperado la contraseña: </MsjBodyExepcion1>
+    <MsjBodyExepcion2> del usuario: </MsjBodyExepcion2>
+  </ValidaConexion>
+</conexion>

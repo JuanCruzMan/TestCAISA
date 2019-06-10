@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TestMaster.master.cs" Inherits="WebAppTest.TestMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server" >
+<title>Sitio Ejemplo</title>
+<link rel="stylesheet" type="text/css" href="~/Css/style.css">
+</head>
+<body>
+<form id="form" runat="server">
+<center>
+<table>
+<tr><td><asp:contentplaceholder id="Header" runat="server" /><img src="Images/20181124_103025.jpg" width="720" height="200" alt="header" /></td></tr>
+<tr><td><asp:contentplaceholder id="Contenido" runat="server" /></td></tr>
+<tr><td><br><asp:contentplaceholder id="Footer" runat="server" /><center>Prueba de CAISA.</center></td></tr>
+</table>
+</center>
+</form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\CAISA\ServicioWeb\WebAppTest\WebAppTest\bin\WebAppTest.dll
+C:\CAISA\ServicioWeb\WebAppTest\WebAppTest\bin\WebAppTest.pdb
+C:\CAISA\ServicioWeb\WebAppTest\WebAppTest\obj\Debug\WebAppTest.csprojResolveAssemblyReference.cache
+C:\CAISA\ServicioWeb\WebAppTest\WebAppTest\obj\Debug\WebAppTest.dll
+C:\CAISA\ServicioWeb\WebAppTest\WebAppTest\obj\Debug\WebAppTest.pdb
